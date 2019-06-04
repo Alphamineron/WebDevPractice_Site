@@ -98,6 +98,9 @@ function updateCartTotal() {
 		.getElementsByClassName("cart-total")[0] // This line "cart-total" isn't really needed
 		.getElementsByClassName("cart-total-price")[0];
 	cartTotalElement.innerText = "$" + Math.round(total * 100) / 100; // Rounding up to 2 decimal places Math.round(<-->*100)/100
+
+
+	actionIfEmpty();
 }
 
 function duplicateItemCheck(title) {
@@ -120,7 +123,7 @@ function duplicateItemCheck(title) {
 }
 
 function renderCart(title, price, imgSrc) {
-	var cartRow = document.createElement("div");
+	let cartRow = document.createElement("div");
 	// We can insert our variables directly into the string below! So SIMPLE!
 	cartRow.innerHTML = `
 					<div class="cart-item cart-column">
@@ -139,10 +142,25 @@ function renderCart(title, price, imgSrc) {
 	cartRow.classList.add("cart-row");
 
 	// We now have our <div>, now lets find injection point
-	var cart = document.getElementsByClassName("cart")[0];
+	let cart = document.getElementsByClassName("cart")[0];
 	cart.append(cartRow);
 
 	// Finally, we also need to add listeners to this new addition...
 	cartRow.getElementsByClassName("btn-danger")[0].addEventListener("click", removeItem);
 	cartRow.getElementsByClassName("cart-quantity-input")[0].addEventListener("change", quantityChanged);
+}
+
+
+function actionIfEmpty() {
+	let cart = document.getElementsByClassName("cart")[0];
+	if (cart.childElementCount > 1) {
+		// Gets rid of the Cart Empty msg if the cart is not empty
+		document.getElementsByClassName("cart-empty")[0].remove();
+	}
+	else {
+		let cartEmptyMsg = document.createElement("p");
+		cartEmptyMsg.innerText = "Cart Empty";
+		cartEmptyMsg.classList.add("cart-empty");
+		cart.append(cartEmptyMsg);	// Injecting
+	}
 }

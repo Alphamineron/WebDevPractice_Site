@@ -371,6 +371,12 @@
 	font-size: 1.1em;
 }
 
+.cart-empty {
+	text-align: center;
+	margin: 40px;
+	font-weight: bold;
+}
+
 /* ADDITIONAL BUTTONS */
 
 .btn-danger {
