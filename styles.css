@@ -1,0 +1,392 @@
+/* This is used to import font directly from a source like google fonts */
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
+@import url("https://fonts.googleapis.com/css?family=Advent+Pro&display=swap");
+
+/* This is used to import font from local file system, usually from files like .woff */
+@font-face {
+	font-family: "Booter - Zero Zero";
+	src: url("res/fonts/Booter - Zero Zero.woff") format("woff"),
+		url("res/fonts/Booter - Zero Zero.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: Raleway;
+	color: grey;
+}
+
+/* ==================================------====================================== */
+/* ==================================HEADER====================================== */
+/* ==================================------====================================== */
+
+.main-header {
+	background-image: url("res/images/Header Background.jpg");
+	background-size: cover;
+	background-color: rgba(0, 0, 0, 0.5);
+	background-blend-mode: multiply;
+
+	padding-bottom: 50px;
+}
+
+.nav li {
+	display: inline;
+}
+.nav a {
+	display: inline-block;
+	padding: 0.3em 5%;
+	color: white;
+	text-decoration: none;
+}
+.nav.main-nav a:hover {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.main-nav {
+	text-align: center;
+	font-size: 1.1em;
+	font-weight: lighter;
+	border-bottom: 1px solid lightgray;
+}
+
+.band-name {
+	text-align: center;
+	margin: 0;
+	font-size: 4em;
+	font-family: "Booter - Zero Zero";
+	font-weight: normal;
+	color: rgb(255, 205, 247);
+}
+
+.band-name-large {
+	font-size: 7em;
+}
+
+.band-logo {
+	margin: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.band-logo img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/* ==================================------====================================== */
+/* ==================================Section===================================== */
+/* ==================================------====================================== */
+
+.content-section {
+	margin: 1em;
+}
+
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 1.5em;
+}
+
+.section-header {
+	font-family: Advent Pro;
+	font-weight: normal;
+	font-size: 2.5em;
+	color: black;
+	text-align: center;
+
+	margin: 0.9em 0;
+}
+
+.about-band-image {
+	float: left;
+	height: 400px;
+	margin: 15px;
+	border-radius: 50%;
+}
+
+/* ==================================------====================================== */
+/* ==================================Footer====================================== */
+/* ==================================------====================================== */
+
+.main-footer {
+	background: #cc2b5e; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#cc2b5e,
+		#753a88
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#cc2b5e,
+		#753a88
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	color: white;
+	padding: 0.25em 0;
+	margin-top: 20px;
+}
+
+.main-footer .band-logo {
+	margin: 5px;
+	padding: 0;
+
+	max-width: 30%;
+	max-height: 30%;
+}
+
+.main-footer-container {
+	display: flex;
+	align-items: center;
+}
+
+.main-footer-container ul {
+	flex-grow: 1;
+	text-align: end;
+}
+
+.footer-nav a {
+	padding: 0 0;
+}
+.footer-nav li {
+	padding: 0 0.5em;
+}
+.footer-nav img {
+	width: 30px;
+	height: 30px;
+}
+
+/* ==================================------====================================== */
+/* ==================================Buttons===================================== */
+/* ==================================------====================================== */
+
+.btn {
+	text-align: center;
+	vertical-align: middle;
+	padding: 0.67em;
+	cursor: pointer;
+}
+
+.btn-header {
+	display: block;
+	margin: 2em auto;
+	/* margin: 0.5em 15% 2em 15%; */
+	color: white;
+	border: 1.5px solid rgb(202, 50, 100);
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 0px;
+	font-weight: normal;
+	padding-left: 2em;
+	padding-right: 2em;
+	/* margin: 0; */
+}
+.btn-header:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-play {
+	display: block;
+	margin: 0 auto;
+	color: rgb(202, 50, 100);
+	font-size: 1.4em;
+	border-radius: 50%;
+	padding: 10px;
+	width: 30px;
+	height: 30px;
+}
+
+.tour-btn {
+	max-width: 19%;
+}
+
+.btn-primary {
+	color: white;
+	background-color: rgb(202, 50, 100);
+	border: none;
+	border-radius: 0.3em;
+	font-weight: bold;
+}
+
+.btn-primary:hover {
+	background-color: rgb(168, 46, 87);
+}
+
+/* ==================================------====================================== */
+/* ==================================Tours======================================= */
+/* ==================================------====================================== */
+
+.tour-row {
+	border-bottom: 1px solid black;
+	padding-bottom: 0.7em;
+	margin-bottom: 0.7em;
+}
+
+.tour-row:last-child {
+	border-bottom: none;
+}
+
+.tour-item {
+	display: inline-block;
+	padding-right: 0.5em;
+}
+
+.tour-date {
+	color: black;
+	font-weight: bolder;
+	width: 11%;
+}
+
+.tour-city {
+	width: 20%;
+}
+
+.tour-arena {
+	width: 42%;
+}
+
+/* ==================================------====================================== */
+/* ==================================Store======================================= */
+/* ==================================------====================================== */
+
+.card {
+	margin: 30px;
+}
+
+.card-title {
+	display: block; /* Convert the inline <span> into block element */
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: black;
+	margin-bottom: 15px;
+}
+
+.card-image {
+	width: 250px;
+}
+
+.card-details {
+	display: flex; /* Allows us to center elements along a horizontal axis */
+	align-items: center;
+}
+
+.card-details-price {
+	flex-grow: 1; /* This makes it so the element takes up all the space it can in it's line */
+	color: black;
+}
+
+.cardview {
+	/* This is where the MAGIC HAPPENS! */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.cart-header {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: black;
+}
+
+.cart-column {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid black;
+	margin-top: 10px;
+	margin-right: 1.5em;
+	padding-bottom: 10px;
+}
+/* ------------------| */
+.cart-row {
+	display: flex;
+}
+
+.cart-item {
+	width: 45%;
+}
+
+.cart-quantity {
+	width: 35%;
+}
+
+.cart-price {
+	width: 20%;
+	font-size: 1.2em;
+	color: #333;
+}
+/* ------------------| */
+
+.cart-item img {
+	width: 75px;
+	height: auto;
+	border-radius: 10px;
+}
+.cart-item span {
+	color: #333;
+	margin-left: 0.5em;
+}
+
+.cart-quantity input {
+	height: 45px;
+	width: 50px;
+
+	border-radius: 5px;
+	border: 2px solid rgb(202, 50, 100);
+
+	margin-right: 10px;
+
+	background-color: rgb(240, 240, 240);
+	color: #333;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.cart-row:last-child {
+	/* Adds a border underline at the last cart-row element */
+	border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+	/* Selects all the elements with cart-column class in the last cart-row element */
+	border: none;
+}
+
+.cart-total {
+	text-align: end;
+	margin-top: 10px;
+	margin-right: 8%;
+}
+
+.cart-total-title {
+	font-weight: bold;
+	font-size: 1.5em;
+	color: black;
+	margin-right: 20px;
+}
+
+.cart-total-price {
+	color: #333;
+	font-size: 1.1em;
+}
+
+/* ADDITIONAL BUTTONS */
+
+.btn-danger {
+	color: white;
+	background-color: rgb(255, 77, 77);
+	border: none;
+	border-radius: 0.3em;
+	font-weight: bold;
+}
+
+.btn-danger:hover {
+	background-color: rgb(218, 47, 47);
+}
+
+.btn-purchase {
+	display: block;
+	margin: 40px auto 80px auto;
+	font-size: 1.75em;
+}
